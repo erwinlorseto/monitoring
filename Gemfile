@@ -74,5 +74,5 @@ end
 
 gem 'active_link_to'
 gem 'bootstrap', '~> 5.3', '>= 5.3.1'
-gem 'online_migrations'
+# gem 'online_migrations'
 gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
