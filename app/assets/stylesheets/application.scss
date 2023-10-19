@@ -13,4 +13,13 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap"
+@import "bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+
+input[name="commit"] {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .w-100;
+  @extend .mt-3;
+}
