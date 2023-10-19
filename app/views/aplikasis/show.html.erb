@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @aplikasi %>
+
+<div>
+  <%= link_to "Edit this aplikasi", edit_aplikasi_path(@aplikasi) %> |
+  <%= link_to "Back to aplikasis", aplikasis_path %>
+
+  <%= button_to "Destroy this aplikasi", @aplikasi, method: :delete %>
+</div>

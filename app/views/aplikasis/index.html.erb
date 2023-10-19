@@ -1,0 +1,27 @@
+<%= content_for :html_title, "Aplikasi" %>
+<%= content_for :navigation do %>
+  <li class="breadcrumb-item" aria-current="page">Home</li>
+  <li class="breadcrumb-item active" aria-current="page">Aplikasi</li>
+<% end %>
+<div class="card border-0 shadow">
+  <div class="card-header">
+    <div class="row align-items-center">
+      <div class="col">
+        <h2 class="fs-5 fw-bold mb-0">Aplikasi</h2>
+      </div>
+      <div class="col text-end">
+        <%= link_to "Aplikasi Baru",
+            new_aplikasi_path,
+            class: 'btn btn-primary',
+            data: {
+              turbo_frame: 'modal'
+            } %>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+      <%= render @aplikasis %>
+    </div>
+  </div>
+</div>
