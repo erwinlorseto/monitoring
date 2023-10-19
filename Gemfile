@@ -47,9 +47,21 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
+  gem 'rspec-core'
+  gem 'rspec-rails'
 end
 
 group :development do
+  gem 'annotate'
+  # capistrano thing
+  gem 'capistrano', '~> 3.11', require: false
+  gem 'capistrano-passenger', '~> 0.2.0', require: false
+  gem 'capistrano-rails', '~> 1.4', require: false
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4', require: false
+  gem 'htmlbeautifier'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
@@ -60,5 +72,7 @@ group :development do
   # gem "spring"
 end
 
+gem 'active_link_to'
 gem 'bootstrap', '~> 5.3', '>= 5.3.1'
+gem 'online_migrations'
 gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
