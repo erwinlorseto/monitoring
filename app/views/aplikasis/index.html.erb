@@ -10,12 +10,14 @@
         <h2 class="fs-5 fw-bold mb-0">Aplikasi</h2>
       </div>
       <div class="col text-end">
-        <%= link_to "Aplikasi Baru",
-            new_aplikasi_path,
-            class: 'btn btn-primary',
+        <%= link_to new_aplikasi_path,
+            class: 'btn btn-primary py-2',
             data: {
               turbo_frame: 'modal'
-            } %>
+            } do %>
+            <i class="bi bi-plus-circle me-2"></i>
+            <span>Aplikasi Baru</span>
+        <% end %>
       </div>
     </div>
   </div>

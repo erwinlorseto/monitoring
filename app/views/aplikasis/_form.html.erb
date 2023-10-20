@@ -32,6 +32,9 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.button nil, class: 'btn-submit' do %>
+      <i class="bi bi-pencil me-2"></i>
+      Simpan
+    <% end %>
   </div>
 <% end %>
