@@ -6,7 +6,6 @@ ruby '3.2.2'
 gem 'rails', '~> 7.1.1'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
@@ -62,6 +61,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.4', require: false
   gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4', require: false
   gem 'htmlbeautifier'
+  # gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
@@ -73,6 +73,7 @@ group :development do
 end
 
 gem 'active_link_to'
-gem 'bootstrap', '~> 5.3', '>= 5.3.1'
+# gem 'bootstrap', '~> 5.3', '>= 5.3.1'
 # gem 'online_migrations'
-gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+
+gem "propshaft", "~> 0.7.0"
