@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_19_024314) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_02_031325) do
   create_table "aplikasis", force: :cascade do |t|
     t.string "nama"
     t.string "alamat_web"
@@ -18,6 +18,27 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_19_024314) do
     t.string "deskripsi"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "status_data", force: :cascade do |t|
+    t.string "kondisi_data"
+    t.string "catatan"
+    t.string "rekomendasi"
+    t.string "validasi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "verifikators", force: :cascade do |t|
+    t.string "jenis_dokumen"
+    t.string "menu_aplikasi"
+    t.string "kondisi_data"
+    t.string "catatan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "rekomendasi"
+    t.integer "aplikasi_id"
+    t.index ["aplikasi_id"], name: "index_verifikators_on_aplikasi_id"
   end
 
 end

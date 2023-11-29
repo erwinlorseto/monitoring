@@ -1,0 +1,51 @@
+<%= form_with(model: verifikator) do |form| %>
+  <% if verifikator.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(verifikator.errors.count, "error") %> prohibited this verifikator from being saved:</h2>
+
+      <ul>
+        <% verifikator.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  <%= form.label :aplikasi, class: 'form-label' %>
+  <%= form.select(:aplikasi_id, options_for_select(Aplikasi.pluck(:nama, :id), form.object.aplikasi), {},
+  { data: {"placeholder": "Pilih Aplikasi",
+            controller: 'dropdown',
+            dropdown_parent_value: '#form-kelompok-anggaran'}
+  }) %>
+  </div>
+
+  <div>
+    <%= form.label :jenis_dokumen, style: "display: block" %>
+    <%= form.text_field :jenis_dokumen %>
+  </div>
+
+  <div>
+    <%= form.label :menu_aplikasi, style: "display: block" %>
+    <%= form.text_field :menu_aplikasi %>
+  </div>
+
+  <div>
+    <%= form.label :kondisi_data, style: "display: block" %>
+    <%= form.text_field :kondisi_data %>
+  </div>
+
+  <div>
+    <%= form.label :catatan, style: "display: block" %>
+    <%= form.text_field :catatan %>
+  </div>
+
+  <div>
+  <%= form.label :rekomendasi, style: "display: block" %>
+  <%= form.text_field :rekomendasi %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

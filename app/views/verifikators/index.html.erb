@@ -1,0 +1,26 @@
+<%= content_for :html_title, "Verifikasi" %>
+<%= content_for :navigation do %>
+  <li class="breadcrumb-item" aria-current="page">Home</li>
+  <li class="breadcrumb-item active" aria-current="page">
+  <%= link_to 'verifikator', verifikators_url %>
+  </li>
+<% end %>
+<p style="color: green"><%= notice %></p>
+
+<h3>Verifikator</h3>
+
+<p class= "new btn btn-sn">
+<%= link_to "New verifikator", new_verifikator_path %>
+</p>
+<%= link_to "Download as CSV", verifikators_path(format: :csv) %>
+
+
+<div id="verifikators">
+  <% @verifikators.each do |verifikator| %>
+    <%= render verifikator %>
+    <p class="style btn btn-sn">
+      <%= link_to "Show this verifikator", verifikator %>
+    </p>
+  <% end %>
+</div>
+

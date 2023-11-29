@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @status_datum %>
+
+<div>
+  <%= link_to "Edit this status data", edit_status_datum_path(@status_datum) %> |
+  <%= link_to "Back to status data", status_data_path %>
+
+  <%= button_to "Destroy this status data", @status_datum, method: :delete %>
+</div>

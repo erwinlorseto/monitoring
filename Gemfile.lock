@@ -128,6 +128,7 @@ GEM
     erubi (1.12.0)
     execjs (2.9.1)
     ffi (1.16.3)
+    ffi (1.16.3-x64-mingw-ucrt)
     globalid (1.2.1)
       activesupport (>= 6.1)
     htmlbeautifier (1.4.2)
@@ -155,7 +156,6 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.4)
     minitest (5.20.0)
     msgpack (1.7.2)
     mutex_m (0.1.2)
@@ -172,15 +172,12 @@ GEM
       net-protocol
     net-ssh (7.2.0)
     nio4r (2.5.9)
-    nokogiri (1.15.4)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.15.4-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.15.4-x64-mingw-ucrt)
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
-    online_migrations (0.8.2)
-      activerecord (>= 4.2)
     popper_js (2.11.8)
     pry (0.14.2)
       coderay (~> 1.1)
@@ -278,9 +275,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.7)
-      mini_portile2 (~> 2.8.0)
     sqlite3 (1.6.7-aarch64-linux)
+    sqlite3 (1.6.7-x64-mingw-ucrt)
     sqlite3 (1.6.7-x86_64-linux)
     sshkit (1.21.5)
       net-scp (>= 1.1.2)
@@ -297,6 +293,8 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2023.3)
+      tzinfo (>= 1.0.0)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -310,7 +308,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
-  ruby
+  x64-mingw-ucrt
   x86_64-linux
 
 DEPENDENCIES
@@ -326,7 +324,6 @@ DEPENDENCIES
   htmlbeautifier
   importmap-rails
   jbuilder
-  online_migrations
   pry-rails
   pry-rescue
   pry-stack_explorer
