@@ -1,4 +1,6 @@
 class Verifikator < ApplicationRecord
+    has_many :aplikasis
+
     require 'csv'
 
 belongs_to :aplikasi
